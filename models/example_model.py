@@ -11,7 +11,7 @@ class ExModel(nn.Module):
         self.resnet18 = model.resnet18(pretrained=False)
         self.resnet18 = torch.nn.Sequential(*(list(self.resnet18.children())[:-1]))    
         
-        self.classifier = torch.nn.Linear(1024, 1000) #TODO Change this classifier according to your application!
+        self.classifier = torch.nn.Linear(1024, 1000) # TODO Change this classifier according to your application!
 
 
     def forward(self, image):
